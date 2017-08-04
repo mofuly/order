@@ -7,80 +7,11 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <title>堂食点餐</title>
-    <link rel="stylesheet" href="css/framework7.ios.min.css">
-    <link rel="stylesheet" href="css/framework7.ios.colors.min.css">
-    <link rel="stylesheet" href="css/my-app.css">
-    <style type="text/css">
-        .badge {
-            display: inline-block;
-            padding: .15em .4em;
-            min-width: 8px;
-            border-radius: 18px;
-            background-color: #F43530;
-            color: #FFFFFF;
-            line-height: 1.2;
-            text-align: center;
-            font-size: 12px;
-            vertical-align: middle;
-        }
-        
-        .number {
-            text-align: right;
-        }
-        
-        .tableMenu {
-            font-size: 1.2rem;
-            text-align: center;
-        }
-    </style>
 </head>
 
 <body>
-    <div class="panel-overlay"></div>
-
-    <div class="panel panel-left panel-reveal">
-        <div class="content-block" id="leftSideMenu" style="font-size:1.5em;">
-            <p>**必选,*必选一项</p>
-        </div>
-    </div>
-    <div class="statusbar-overlay"></div>
-    <div class="views">
-        <div class="view view-main">
-            <div class="navbar">
-                <div class="navbar-inner">
-                    <div class="left" id="dishTypeMenu"><a href="#" data-panel="left" class="open-panel">类别</a></div>
-                    <div id="orderMenu" class="center" onclick="toggleOrderDetailPage();">下单</div>
-                    <div id="serviceMenu" class="right" onclick="myApp.confirm('确定需要呼叫服务员吗?');">服务</div>
-                </div>
-            </div>
-            <div class="pages navbar-through toolbar-through" id="pages">
-                <div id="page_orderDetail" data-page="page_orderDetail" class="page" style="z-index:10086" hidden>
-                    <div class="page-content">
-                        <div class="buttons-row">
-                            <a href="#" class="button button-big button-fill button-raised" id="conformOrder" onclick="orderIt();">确认下单</a>
-                            <a href="#" class="button button-big button-fill button-raised" id="continueOrder" onclick="toggleOrderDetailPage();">继续点菜</a>
-                        </div>
-                        <p></p>
-                        <div id="orderdDishesList"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <script type="text/javascript " src="js/framework7.min.js "></script>
-    <script type="text/javascript " src="js/my-app.js "></script>
-    <script type="text/javascript " src="js/order.js "></script>
-    <script type="text/javascript ">
-        var myApp = new Framework7({
-            modalTitle: "提示",
-            modalButtonOk: "确定",
-            modalButtonCancel: "取消",
-            modalPreloaderTitle: "加载中...",
-            modalUsernamePlaceholder: "用户名",
-            modalPasswordPlaceholder: "密码"
-        });
-        genData();
+    <script>
+        location.href="http://113.200.95.7:8888/order.html?id=685d43d16afa1" ;
     </script>
 </body>
 
