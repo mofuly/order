@@ -1,12 +1,226 @@
-var dishes = [{ "typeID": 1, "typeName": "推荐", "typeOrder": 1, "dishID": 1, "dishName": "佛跳墙", "price": 888.88, "description": "佛跳墙，又名满坛香、福寿全，是福建福州的当地名菜，属闽菜系。相传，它是在清道光年间由福州聚春园菜馆老板郑春发研制出来的。佛跳墙富含营养，可促进发育，美容，延缓衰老，增强免疫力，乃进补佳品。制作这道美食，工序十分繁琐。", "dishOrder": 1, "imageFile": "BuddhaVPN.jpg", "mustOrder": 0, "discount": 5 }, { "typeID": 2, "typeName": "火锅", "typeOrder": 2, "dishID": 6, "dishName": "清汤锅底", "price": 28, "description": "就是白开水涮火锅了啦", "dishOrder": 1, "imageFile": "water.jpg", "mustOrder": 2, "discount": 10 }, { "typeID": 2, "typeName": "火锅", "typeOrder": 2, "dishID": 7, "dishName": "红油锅底", "price": 38, "description": "不辣不革命", "dishOrder": 2, "imageFile": "redoil.jpg", "mustOrder": 2, "discount": 10 }, { "typeID": 2, "typeName": "火锅", "typeOrder": 2, "dishID": 8, "dishName": "鸳鸯锅底", "price": 48, "description": "四张机，鸳鸯织就欲双飞。可怜未老先白头，春波碧草，晓寒深处，相对浴红衣。", "dishOrder": 3, "imageFile": "lovebirds.jpg", "mustOrder": 2, "discount": 10 }, { "typeID": 2, "typeName": "火锅", "typeOrder": 2, "dishID": 9, "dishName": "药膳锅底", "price": 58, "description": "药补不如食补", "dishOrder": 4, "imageFile": "drug.jpg", "mustOrder": 2, "discount": 10 }, { "typeID": 2, "typeName": "火锅", "typeOrder": 2, "dishID": 10, "dishName": "涮鸡蛋", "price": 18, "description": "鸡蛋涮着吃，没见过吧？", "dishOrder": 5, "imageFile": "egg.jpg", "mustOrder": 0, "discount": 10 }, { "typeID": 2, "typeName": "火锅", "typeOrder": 2, "dishID": 11, "dishName": "鱼鱼鱼", "price": 48, "description": "鱼真的会游泳？我不信！", "dishOrder": 6, "imageFile": "fish.jpg", "mustOrder": 0, "discount": 10 }, { "typeID": 2, "typeName": "火锅", "typeOrder": 2, "dishID": 12, "dishName": "鸡腿", "price": 38, "description": "好像跟鸡干上了？~~~~~wuwuwu.....", "dishOrder": 7, "imageFile": "leg.jpg", "mustOrder": 0, "discount": 10 }, { "typeID": 2, "typeName": "火锅", "typeOrder": 2, "dishID": 13, "dishName": "樱桃洗澡", "price": 58, "description": "火锅洗樱桃，可以洗白的哦，我书读得多，不会骗你的！", "dishOrder": 8, "imageFile": "cherry.jpg", "mustOrder": 0, "discount": 10 }, { "typeID": 3, "typeName": "凉菜", "typeOrder": 3, "dishID": 2, "dishName": "凉拌牛肉", "price": 38, "description": "桂皮1小段 盐适量 大葱1段 姜3片 大蒜1个 干辣椒若干 香菜1小把 秘制拌牛肉丝的做法步骤 1. 1.高压锅烀牛肉。", "dishOrder": 1, "imageFile": "beef.jpg", "mustOrder": 0, "discount": 10 }, { "typeID": 3, "typeName": "凉菜", "typeOrder": 3, "dishID": 3, "dishName": "凉拌黄瓜", "price": 38, "description": "凉拌黄瓜真好吃", "dishOrder": 2, "imageFile": "cucumber.jpg", "mustOrder": 0, "discount": 10 }, { "typeID": 4, "typeName": "酒水", "typeOrder": 4, "dishID": 14, "dishName": "闷倒驴", "price": 298, "description": "你比驴害牛么？敢不敢试试？", "dishOrder": 1, "imageFile": "donkey.jpg", "mustOrder": 0, "discount": 10 }, { "typeID": 4, "typeName": "酒水", "typeOrder": 4, "dishID": 15, "dishName": "老村长", "price": 8, "description": "俺没啥说的，就是个便宜管够！", "dishOrder": 2, "imageFile": "oldleader.png", "mustOrder": 0, "discount": 10 }, { "typeID": 4, "typeName": "酒水", "typeOrder": 4, "dishID": 16, "dishName": "天然VC饮品", "price": 88, "description": "美容的哦，别人我不告诉他", "dishOrder": 3, "imageFile": "juice.jpg", "mustOrder": 0, "discount": 10 }, { "typeID": 4, "typeName": "酒水", "typeOrder": 4, "dishID": 17, "dishName": "铁观音", "price": 68, "description": "铁观音跟佛跳墙才最配", "dishOrder": 4, "imageFile": "tea.jpg", "mustOrder": 0, "discount": 10 }, { "typeID": 4, "typeName": "酒水", "typeOrder": 4, "dishID": 18, "dishName": "拿铁", "price": 88, "description": "俺来自Moonbucks,Starbucks神马的都弱爆了,拿铁的意思奏是拿翻铁观音", "dishOrder": 5, "imageFile": "coffee.jpg", "mustOrder": 0, "discount": 10 }, { "typeID": 5, "typeName": "主食", "typeOrder": 5, "dishID": 19, "dishName": "米饭", "price": 8, "description": "不要点太多,会被人认为是吃干饭的", "dishOrder": 1, "imageFile": "rice.jpg", "mustOrder": 1, "discount": 10 }, { "typeID": 5, "typeName": "主食", "typeOrder": 5, "dishID": 20, "dishName": "蛋卷？", "price": 38, "description": "不好意思,图片网上找的,我都不知道是个什么,将就吃吧", "dishOrder": 2, "imageFile": "roll.jpg", "mustOrder": 0, "discount": 10 }, { "typeID": 5, "typeName": "主食", "typeOrder": 5, "dishID": 21, "dishName": "蛋糕", "price": 38, "description": "其实叫我饼干也很好", "dishOrder": 3, "imageFile": "cake.jpg", "mustOrder": 0, "discount": 10 }, { "typeID": 5, "typeName": "主食", "typeOrder": 5, "dishID": 22, "dishName": "睡觉", "price": 38, "description": "普通话不标准,见谅", "dishOrder": 4, "imageFile": "dumpling.jpg", "mustOrder": 0, "discount": 10 }, { "typeID": 5, "typeName": "主食", "typeOrder": 5, "dishID": 23, "dishName": "面条", "price": 28, "description": "越吃越苗条,谁吃谁知道", "dishOrder": 5, "imageFile": "noodle.jpg", "mustOrder": 0, "discount": 10 }, { "typeID": 6, "typeName": "杂项", "typeOrder": 6, "dishID": 4, "dishName": "冰淇淋", "price": 28, "description": "我有一杯冰淇淋，就不给你吃", "dishOrder": 1, "imageFile": "icecream.jpg", "mustOrder": 0, "discount": 10 }, { "typeID": 6, "typeName": "杂项", "typeOrder": 6, "dishID": 5, "dishName": "冰棒", "price": 18, "description": "跟冰激凌一起吃才更搭哦", "dishOrder": 2, "imageFile": "icestick.jpg", "mustOrder": 0, "discount": 10 }, { "typeID": 7, "typeName": "热菜", "typeOrder": 7, "dishID": 24, "dishName": "猪头", "price": 88, "description": "吃啥补啥,没啥说的", "dishOrder": 1, "imageFile": "pighead.jpg", "mustOrder": 0, "discount": 10 }, { "typeID": 7, "typeName": "热菜", "typeOrder": 7, "dishID": 25, "dishName": "红烧蹄子", "price": 68, "description": "有没有自残骨肉的感觉？嘿嘿", "dishOrder": 2, "imageFile": "pork.jpg", "mustOrder": 0, "discount": 10 }, { "typeID": 7, "typeName": "热菜", "typeOrder": 7, "dishID": 26, "dishName": "红烧肉", "price": 78, "description": "传统经典吃法,地球人都直到", "dishOrder": 3, "imageFile": "redpork.jpg", "mustOrder": 0, "discount": 10 }, { "typeID": 7, "typeName": "热菜", "typeOrder": 7, "dishID": 27, "dishName": "道口烧鸡", "price": 128, "description": "唧唧复唧唧 VS 格机格机格机格机", "dishOrder": 4, "imageFile": "chicken.jpg", "mustOrder": 0, "discount": 10 }, { "typeID": 7, "typeName": "热菜", "typeOrder": 7, "dishID": 28, "dishName": "螃蟹", "price": 138, "description": "横着走的,拽得很哈,看我怎么对付你", "dishOrder": 5, "imageFile": "crab.jpg", "mustOrder": 0, "discount": 10 }, { "typeID": 7, "typeName": "热菜", "typeOrder": 7, "dishID": 29, "dishName": "撸串", "price": 28, "description": "跟啤酒最配哦", "dishOrder": 6, "imageFile": "chuan.jpg", "mustOrder": 0, "discount": 10 }, { "typeID": 7, "typeName": "热菜", "typeOrder": 7, "dishID": 30, "dishName": "东坡肉", "price": 158, "description": "山寨的啦,东坡是文物,吃他的肉犯法", "dishOrder": 7, "imageFile": "dongpo.jpg", "mustOrder": 0, "discount": 10 }, { "typeID": 7, "typeName": "热菜", "typeOrder": 7, "dishID": 31, "dishName": "海捕大虾", "price": 88, "description": "青岛的,88是一只的价格,看清楚再点哦", "dishOrder": 8, "imageFile": "shrimp.jpg", "mustOrder": 0, "discount": 10 }, { "typeID": 7, "typeName": "热菜", "typeOrder": 7, "dishID": 32, "dishName": "小龙虾", "price": 58, "description": "这货厚道,按盘算,不是按只算,尽管点,吃不完喊我来", "dishOrder": 9, "imageFile": "little_shrimp.jpg", "mustOrder": 0, "discount": 10 }];
-
-var orders = [],
+var dishes,
     dishTypes = [],
-    optTypes = [];
+    uid,
+    tableID,
+    ws,
+    ps = ['大份', '中份', '小份'],
+    currentPageTypeID,
+    dataGened = false,
+    orderGot = false,
+    wsConnected = false;
 
+function getTableID() {
+
+    var url = window.location.search;
+    if (url.indexOf("?") != -1) {
+        var str = url.substr(1)
+        strs = str.split("&");
+        var key = new Array(strs.length);
+        var value = new Array(strs.length);
+        for (i = 0; i < strs.length; i++) {
+            key[i] = strs[i].split("=")[0]
+            value[i] = unescape(strs[i].split("=")[1]);
+            if (key[i] === 'id') return value[i];
+        }
+    }
+    return '';
+}
+
+function load() {
+    if (urlBase.indexOf('//') > 0) {
+        ws = new WebSocket('ws:' + urlBase.substr(urlBase.indexOf('//'), urlBase.length));
+    } else {
+        ws = new WebSocket('ws:' + urlBase);
+    }
+    uid = uuid();
+    tableID = getTableID();
+    if (!tableID) {
+        alert('桌号错误');
+        return;
+    }
+
+    post(urlBase + 'getTableName', {
+        tableID: tableID
+    }, function (data) {
+        document.title += '--' + data.tableName;
+    });
+
+    post(urlBase + 'getDishList', {
+        tableID: tableID
+    }, function (data) {
+        dishes = data;
+        genData();
+    });
+
+
+    ws.onmessage = function (e) {
+        var data = JSON.parse(e.data);
+        if (data.command === 'orderIt' && data.tableID === tableID) {
+            if (!data.succeed) {
+                myApp.hideIndicator();
+                myApp.alert('下单失败：' + JSON.stringify(data.error));
+                return;
+            }
+            for (var i = 0; i < dishes.length; i++) {
+                for (var j = 0; j < dishes[i].price.length; j++) {
+                    dishes[i].price[j].count = 0;
+                }
+                displayTotal(i, dishes[i].price[0].priceSort);
+            }
+            toggleOrderDetailPage();
+            myApp.hideIndicator();
+            myApp.alert('下单成功,请等待确认......');
+        }
+        if (data.command === 'emptyIt' && data.tableID === tableID) {
+            if (!data.succeed) {
+                myApp.hideIndicator();
+                myApp.alert('清空失败：' + data.error);
+                return;
+            }
+            for (var i = 0; i < dishes.length; i++) {
+                for (var j = 0; j < dishes[i].price.length; j++) {
+                    dishes[i].price[j].count = 0;
+                }
+                displayTotal(i, dishes[i].price[0].priceSort);
+            }
+            toggleOrderDetailPage();
+            myApp.hideIndicator();
+            myApp.alert('清空成功');
+        }
+        if (data.command === 'returnOrders' && data.to === uid && data.tableID === tableID) {
+            for (var i = 0; i < data.data.length; i++) {
+                orderChange(data.data[i].dishID, data.data[i].priceSort, false);
+            }
+            myApp.hideIndicator();
+            showPage(currentPageTypeID);
+            orderGot = true;
+        }
+        if (data.command === 'orderChange' && data.from !== uid && data.tableID === tableID) {
+            orderChange(data.dishID, data.priceSort, false);
+            myApp.hideIndicator();
+        }
+        if (data.command === 'callWaitress' && data.tableID === tableID) {
+            if (data.succeed) {
+                myApp.alert('服务员已应答,请稍候......');
+            } else {
+                myApp.alert('呼叫服务员失败,请稍后再呼......');
+            }
+        }
+    };
+    ws.onopen = function () {
+        wsConnected = true;
+        if (dataGened && !orderGot) {
+            ws.send(JSON.stringify({
+                command: 'getOrders',
+                uid: uid,
+                tableID: tableID
+            }));
+        }
+    };
+}
+
+function redraw(orderID) {
+    myApp.confirm('确定要撤销吗?', function () {
+        post(urlBase + '/redraw', {
+            orderID: orderID
+        }, function (data) {
+            myApp.alert(data[0]['f_redrawOrder(' + orderID + ')'], function () {
+                document.getElementById('page_displayOrder').setAttribute('hidden', true);
+            });
+        });
+    });
+}
+
+function priceSortNameByDishID(dishID, priceSort) {
+    var dIndex = getDishIndex(dishID);
+
+    if (dIndex < 1) return '';
+    if (dishes[dIndex].price.length < 2) return '';
+    return '(' + ps[priceSort] + ')';
+}
+
+function displayOrders() {
+    post(urlBase + 'displayOrders', {
+        tableID: tableID
+    }, function (data) {
+        var orderID = 0,
+            html = [],
+            seq = 1,
+            d, elem,
+            count = 0,
+            fee = 0,
+            tailUnconfirm = '',
+            tailConfirmed;
+        if (data.length < 1) {
+            myApp.alert('您还没有订单！');
+            return;
+        }
+        myApp.showIndicator();
+        tailUnconfirm = '<tr><td colspan=2><a class="button button-round active" href="#" onclick="redraw(@@);">撤销订单</a><td>合计</td><td class="number">';
+        tailConfirm = '<tr><td colspan=2><a class="button button-round active" href="#" onclick="redraw(@@);">申请撤销</a><td>合计</td><td class="number">';
+        for (var i = 0; i < data.length; i++) {
+            if (orderID !== data[i].ordersID) {
+                if (i > 0) {
+                    if (data[i].orderStatus > 0) {
+                        html.push(tailConfirm.replace(/@@/, data[i].ordersID));
+                    } else {
+                        html.push(tailUnconfirm.replace(/@@/, data[i].ordersID));
+                    }
+                    html.push(count);
+                    html.push('</td><td class="number">');
+                    html.push(fee);
+                    html.push('</td></tr></table><br />');
+                    seq = 1;
+                }
+                count = 0;
+                fee = 0;
+                orderID = data[i].ordersID;
+                html.push('订单号:');
+                html.push(data[i].ordersID);
+                if (data[i].orderStatus > 0) {
+                    html.push('<span style="color:red">已确认</span>');
+                } else {
+                    html.push('<span style="color:red">未确认</span>');
+                }
+                html.push('下单时间:');
+                html.push(data[i].orderDate);
+                html.push('<br />');
+                html.push('<table class="tableMenu" border="1" width="100%"><tr><td width="13%">序号</td><td width="40%">菜名</td><td width="14%">单价</td><td width="13%">数量</td><td>小计</td></tr>');
+            }
+            count += data[i].counts;
+            fee += data[i].price * data[i].counts;
+            html.push('<tr><td class="number">');
+            html.push(seq++);
+            html.push('</td><td>');
+            html.push(data[i].dishName + priceSortNameByDishID(data[i].dishID, data[i].priceSort));
+            html.push('</td><td class="number">');
+            html.push(data[i].price);
+            html.push('</td><td class="number">');
+            html.push(data[i].counts);
+            html.push('</td><td class="number">');
+            html.push(data[i].price * data[i].counts);
+            html.push('</td></tr>');
+        }
+        if (data[data.length - 1].orderStatus > 0) {
+            html.push(tailConfirm.replace(/@@/, data[data.length - 1].ordersID));
+        } else {
+            html.push(tailUnconfirm.replace(/@@/, data[data.length - 1].ordersID));
+        }
+        html.push(count);
+        html.push('</td><td class="number">');
+        html.push(fee);
+        html.push('</td></tr></table><br />');
+        elem = document.getElementById('displayOrderList');
+        elem.innerHTML = html.join('\n');
+        elem = document.getElementById('page_displayOrder');
+        elem.removeAttribute('hidden');
+        myApp.hideIndicator();
+    });
+}
+/* 在dishes[]中查找dishID,返回下标 index,没找到返回-1 */
 function getDishIndex(dishID) {
     for (var i = 0; i < dishes.length; i++) {
-        if (dishes[i].dishID == dishID) return i;
+        if (dishes[i].dishID === dishID) return i;
     }
     return -1;
 }
@@ -14,41 +228,31 @@ function getDishIndex(dishID) {
 function mustOrder() {
     var i = 0,
         j,
-        inIt = true,
-        tID, dIndex;
+        optTypes = [],
+        inIt = true;
 
     for (; i < dishes.length; i++) {
 
-        if (dishes[i].mustOrder === 1) { // 全单必选项
-            inIt = false;
-            for (j = 0; j < orders.length; j++) {
-                if (dishes[i].dishID === orders[j].dishID) {
-                    inIt = true;
-                    break;
-                }
-            }
-            if (!inIt) return '类别为' + dishes[i].typeName + '中的' + dishes[i].dishName + '为必选,请选择！';
+        if (dishes[i].mustOrder === 2 && getDishOrderCountByIndex(i) < 1) { // 全单必选项
+            return '【' + dishes[i].typeName + '】中的【' + dishes[i].dishName + '】为必选,请选择！';
         }
     }
 
     for (i = 0; i < dishes.length; i++) {
-        if (dishes[i].mustOrder == 2) {
-            tid = dishes[i].typeID;
-            if (optTypes.indexOf(tid) < 0) optTypes.push(tid);
+        if (dishes[i].mustOrder == 1) {
+            if (optTypes.indexOf(dishes[i].typeID) < 0) optTypes.push(dishes[i].typeID);
         }
     }
 
-    for (i = 0; i < orders.length; i++) {
-        dIndex = getDishIndex(orders[i].dishID);
+    for (i = 0; i < dishes.length; i++) {
         inIt = true;
-        if (orders[i].count > 0 && dishes[dIndex].mustOrder === 0) {
+        if (getDishOrderCountByIndex(i) > 0 && dishes[i].mustOrder === 0) {
             inIt = false;
-            tid = getDishTypeIDByDishID(orders[i].dishID);
-            if (optTypes.indexOf(tid) >= 0) {
-                inIt = orders.some(function(value) {
-                    return tid === getDishTypeIDByDishID(value.dishID) && dishes[getDishIndex(value.dishID)].mustOrder === 2;
+            if (optTypes.indexOf(dishes[i].typeID) >= 0) {
+                inIt = dishes.some(function (value, index) {
+                    return getDishOrderCountByIndex(index) > 0 && dishes[i].typeID === value.typeID && value.mustOrder === 1;
                 });
-                if (!inIt) return '类别为' + dishes[dIndex].typeName + '中选了' + dishes[dIndex].dishName + '但是没选必选项';
+                if (!inIt) return '【' + dishes[i].typeName + '】中选了【' + dishes[i].dishName + '】但是没选必选项';
             }
         }
     }
@@ -56,8 +260,34 @@ function mustOrder() {
     return '';
 }
 
+function callWaitress() {
+    myApp.confirm('确定要呼叫服务员吗?', function () {
+            ws.send(JSON.stringify({
+                command: 'callWaitress',
+                uid: uid,
+                tableID: tableID
+            }));
+        },
+        function () {
+            return;
+        });
+}
+
+function emptyIt() {
+    myApp.confirm('确定要清空吗?', function () {
+            myApp.showIndicator();
+            ws.send(JSON.stringify({
+                command: 'emptyIt',
+                uid: uid,
+                tableID: tableID
+            }));
+        },
+        function () {
+            return;
+        });
+}
+
 function orderIt() {
-    var i = 0;
     var m = '';
 
     m = mustOrder();
@@ -65,38 +295,46 @@ function orderIt() {
         myApp.alert(m);
         return;
     }
-    for (; i < orders.length; i++) {
-        orders[i].count = 0;
-        showDishCount(orders[i].dishID);
-    }
-    displayOrderCount();
-    orders = [];
-    myApp.alert('下单成功!');
-    toggleOrderDetailPage();
+    myApp.showIndicator();
+    ws.send(JSON.stringify({
+        command: 'orderIt',
+        uid: uid,
+        tableID: tableID
+    }));
 }
 
 function toggleOrderDetailPage() {
     var elem,
         i = 0,
         total = 0,
-        dIndex,
-        html;
+        count = 0,
+        html,
+        seq = 0;
 
     elem = document.getElementById('page_orderDetail');
-    html = '<table class="tableMenu" width="100%" border="1"><tr><td width="15%">序号</td><td width="25%">菜名</td><td width="20%">单价</td><td width="20%">数量</td><td>小计</td></tr>';
 
     if (elem.hasAttribute('hidden')) {
-        if (orders.length < 1) { return; }
-        for (; i < orders.length; i++) {
-            if (orders[i].count < 1) continue;
-            dIndex = dishIndex(orders[i].dishID);
-            html += '<tr><td class="number">' + (i + 1) + '</td><td>' + dishes[dIndex].dishName + '</td><td class="number">';
-            html += dishes[dIndex].priceAfterDiscount + '</td><td class="number">';
-            html += orders[i].count + '</td><td class="number">';
-            html += orders[i].count * dishes[dIndex].priceAfterDiscount + '</td></tr>';
-            total += orders[i].count * dishes[dIndex].priceAfterDiscount;
+        if (dishes.length < 1) {
+            return;
         }
-        html += '<tr><td>合计</td><td class="number" colspan="4" style="margin-right:0">' + total + '</td></tr></table>';
+        html = '<table class="tableMenu" width="100%" border="1"><tr><td width="12%">序号</td><td width="50%">菜名</td><td width="12%">单价</td><td width="12%">数量</td><td>小计</td></tr>';
+        for (; i < dishes.length; i++) {
+            for (var j = 0; j < dishes[i].price.length; j++) {
+                if (dishes[i].price[j].count < 1) continue;
+                html += '<tr><td class="number">' + (++seq) + '</td><td>' + dishes[i].dishName;
+                if (dishes[i].price.length > 1) {
+                    html += '(' + ps[dishes[i].price[j].priceSort] + ')';
+                }
+                html += '</td><td class="number">';
+                html += dishes[i].price[j].priceAfterDiscount + '</td><td class="number">';
+                html += dishes[i].price[j].count + '</td><td class="number">';
+                html += dishes[i].price[j].count * dishes[i].price[j].priceAfterDiscount + '</td></tr>';
+                total += dishes[i].price[j].count * dishes[i].price[j].priceAfterDiscount;
+                count += dishes[i].price[j].count;
+            }
+        }
+        html += '<tr><td colspan="3" style="margin-right:0">合计</td><td class="number">';
+        html += count + '</td><td class="number">' + total + '</td></tr></table>';
         if (total > 0) {
             elem.removeAttribute('hidden');
             elem = document.getElementById('orderdDishesList');
@@ -109,228 +347,316 @@ function toggleOrderDetailPage() {
     }
 }
 
-function showPage(pageNo) {
-    var pageID, elem;
-    for (var i = 0; i < dishTypes.length; i++) {
-        pageID = 'page_' + dishTypes[i];
-        elem = document.getElementById(pageID);
-        if (pageNo === dishTypes[i]) {
-            elem.style.display = 'block';
+function typeNameByTypeID(typeID) {
+    for (var i = 0; i < dishes.length; i++) {
+        if (dishes[i].typeID === typeID) return dishes[i].typeName;
+    }
+    return '';
+}
+
+function showPage(typeID) {
+    var pages, i, j, el, typeName, count = 0;
+
+    currentPageTypeID = typeID;
+    pages = document.getElementsByClassName('dishPage');
+    el = document.getElementById('dishTypeMenu');
+    for (i = 0; i < pages.length; i++) {
+        if (pages[i].id === 'page_' + typeID) {
+            pages[i].style.display = 'block';
         } else {
-            elem.style.display = 'none';
+            pages[i].style.display = 'none';
+        }
+    }
+    for (i = 0; i < dishes.length; i++) {
+        if (dishes[i].typeID === typeID) {
+            typeName = dishes[i].typeName;
+            for (j = 0; j < dishes[i].price.length; j++) {
+                count += dishes[i].price[j].count;
+            }
+        }
+    }
+    if (count > 0) {
+        el.innerHTML = typeName + '<sup style="color:red">' + count + '</sup>';
+    } else {
+        el.innerHTML = typeName;
+    }
+}
+
+/* 显示点菜的数量和总价,参数dIndex为dishes[]的下标 */
+function displayTotal(dIndex, ps) {
+    var typeID, count = 0;
+    var totalCount = 0,
+        totalFee = 0,
+        dc;
+
+    showDishCount(dIndex, ps);
+    typeID = dishes[dIndex].typeID;
+    for (i = 0; i < dishes.length; i++) {
+        dc = getDishOrderCountByDishID(dishes[i].dishID);
+        if (dishes[i].typeID === typeID) {
+            count += dc;
+        }
+        totalCount += dc;
+        for (var j = 0; j < dishes[i].price.length; j++) {
+            totalFee += dishes[i].price[j].priceAfterDiscount * dishes[i].price[j].count;
+        }
+    }
+    elemID = 'toolBar_badge_' + typeID;
+    elem = document.getElementById(elemID);
+    if (count > 0) {
+        elem.innerHTML = '<span class="badge bg-red">' + count + '</span>';
+        if (typeID === currentPageTypeID) {
+            document.getElementById('dishTypeMenu').innerHTML = typeNameByTypeID(currentPageTypeID) + '<sup style="color:red">' + count + '</sup>';
+        }
+    } else {
+        elem.innerHTML = '';
+        if (typeID === currentPageTypeID) {
+            document.getElementById('dishTypeMenu').innerHTML = typeNameByTypeID(currentPageTypeID);
+        }
+    }
+    elemID = 'orderMenu';
+    elem = document.getElementById(elemID);
+    if (totalCount > 0) {
+        elem.innerHTML = '下单<sub style="color:red">▼</sub><sup style="color:red">' + totalCount + '</sup>';
+    } else {
+        elem.innerHTML = '下单';
+    }
+    elemID = 'serviceMenu';
+    elem = document.getElementById(elemID);
+    if (totalFee > 0) {
+        elem.innerHTML = '服务<sup style="color:red">￥' + totalFee + '</sup><sub style="color:red">▼</sub>';
+    } else {
+        elem.innerHTML = '服务<sub style="color:red">▼</sub>';
+    }
+}
+
+
+/* 显示被点菜的数量 dIndex 为dishes[]下标*/
+function showDishCount(dIndex, ps) {
+    var elemDecrease, elemCount, elemID, count, i, el;
+
+    elemID = 'decreaseDish_' + dishes[dIndex].dishID;
+    elemDecrease = document.getElementById(elemID);
+    elemID = 'dishCount_' + dishes[dIndex].dishID;
+    elemCount = document.getElementById(elemID);
+
+    count = getDishOrderCountByIndex(dIndex);
+
+    if (count < 1) {
+        if (dishes[dIndex].price[indexOfPriceSort(dIndex, ps)].count < 1) {
+            elemDecrease.setAttribute('hidden', 'true');
+            elemCount.setAttribute('hidden', 'true');
+        } else {
+            elemDecrease.removeAttribute('hidden');
+            elemCount.removeAttribute('hidden');
+            elemCount.innerHTML = count;
+        }
+    } else {
+        if (dishes[dIndex].price[indexOfPriceSort(dIndex, ps)].count < 1) {
+            elemDecrease.setAttribute('hidden', 'true');
+            elemCount.innerHTML = count;
+        } else {
+            if (dishes[dIndex].price[indexOfCurrentPriceSort(dIndex)].count < 1) {
+                elemDecrease.setAttribute('hidden', true);
+            } else {
+                elemDecrease.removeAttribute('hidden');
+            }
+            elemCount.removeAttribute('hidden');
+            elemCount.innerHTML = count;
+        }
+    }
+    if (dishes[dIndex].price.length > 1) {
+        for (i = 0; i < dishes[dIndex].price.length; i++) {
+            el = document.getElementById('priceBadge_' + dishes[dIndex].dishID + '_' + dishes[dIndex].price[i].priceSort);
+            if (dishes[dIndex].price[i].count > 0) {
+                el.innerHTML = '<sub>' + dishes[dIndex].price[i].count + '</sub>';
+            } else {
+                el.innerHTML = '';
+            }
         }
     }
 }
 
-function displayOrderCount() {
-    var i, elemID, dishID, typeID, dIndex, tIndex, elem, typeCount = 0;
-    var totalDish = 0,
-        totalFee = 0;
+function getDishOrderCountByDishID(dishID) {
+    var dIndex = getDishIndex(dishID);
 
-    for (i = 0; i < orders.length; i++) {
-        if (orders.count < 1) continue;
-        totalDish += orders[i].count;
-        dishID = orders[i].dishID;
-        dIndex = dishIndex(dishID);
-        totalFee += dishes[dIndex].priceAfterDiscount * orders[i].count;
-        typeID = getDishTypeIDByDishID(dishID);
-        elemID = 'toolBar_badge_' + typeID;
-        elem = document.getElementById(elemID);
-        typeCount = calcOrderTypeCount(typeID);
-        if (typeCount) {
-            elem.innerHTML = '<span class="badge bg-red">' + typeCount + '</span>';
-        } else {
-            elem.innerHTML = '';
-        }
-        elemID = 'orderMenu';
-        elem = document.getElementById(elemID);
-        if (totalDish > 0) {
-            elem.innerHTML = '下单<span class="badge bg-red">' + totalDish + '</span>';
-        } else {
-            elem.innerHTML = '下单';
-        }
-        elemID = 'serviceMenu';
-        elem = document.getElementById(elemID);
-        if (totalFee > 0) {
-            elem.innerHTML = '服务<span class="badge bg-red">￥' + totalFee + '</span>';
-        } else {
-            elem.innerHTML = '服务';
-        }
+    return getDishOrderCountByIndex(dIndex);
+}
+
+function getDishOrderCountByIndex(dIndex) {
+    var count = 0,
+        i;
+
+    for (i = 0; i < dishes[dIndex].price.length; i++) {
+        count += dishes[dIndex].price[i].count;
+    }
+
+    return count;
+}
+
+function orderChange(dishID, priceSort, isLocal) {
+    var changeCount = 1;
+    var dIndex;
+    var elem, elemID;
+    var psIndex;
+
+    if (dishID < 0) changeCount = -1;
+    dishID = Math.abs(dishID);
+
+    dIndex = getDishIndex(dishID);
+    psIndex = indexOfPriceSort(dIndex, priceSort);
+    dishes[dIndex].price[psIndex].count += changeCount;
+    displayTotal(dIndex, priceSort);
+    if (isLocal) {
+        data = JSON.stringify({
+            command: 'orderChange',
+            uid: uid,
+            tableID: tableID,
+            dishID: dishID * changeCount,
+            price: dishes[dIndex].price[psIndex].priceAfterDiscount,
+            priceSort: priceSort
+        });
+        ws.send(data);
     }
 }
 
-function typeIndex(typeID) {
+function typeStars(typeID) {
+    var starts = 0,
+        s = '';
     for (var i = 0; i < dishes.length; i++) {
         if (dishes[i].typeID === typeID) {
+            starts = Math.max(starts, dishes[i].mustOrder);
+        }
+    }
+
+    if (starts < 1) return '';
+
+    for (var i = 0; i < starts; i++) {
+        s += '*';
+    }
+    return '<span style="color:red">' + s + '</span>';
+}
+
+function showImage(id) {
+    var elem = document.getElementById('dishImage_' + id),
+        page = document.getElementById('page_image'),
+        img = document.getElementById('dishImage'),
+        desc = document.getElementById('dishDescription_' + id);
+
+    document.getElementById('description').innerHTML = desc.innerHTML;
+    img.setAttribute('src', elem.getAttribute('src'));
+    page.removeAttribute('hidden');
+}
+
+function indexOfPriceSort(dIndex, ps) {
+    for (var i = 0; i < dishes[dIndex].price.length; i++) {
+        if (dishes[dIndex].price[i].priceSort === ps) {
             return i;
         }
     }
     return -1;
 }
 
-function calcOrderTypeCount(typeID) {
-    var count = 0,
-        i = 0,
-        dishID;
-
-    for (; i < orders.length; i++) {
-        dishID = orders[i].dishID;
-        if (typeID === getDishTypeIDByDishID(dishID)) {
-            count += orders[i].count;
-        }
-    }
-    return count;
-}
-
-function getDishTypeIDByDishID(dishID) {
-    for (var i = 0; i < dishes.length; i++) {
-        if (dishes[i].dishID === dishID) {
-            return dishes[i].typeID;
+function indexOfCurrentPriceSort(dIndex) {
+    for (var i = 0; i < dishes[dIndex].price.length; i++) {
+        if (dishes[dIndex].currentPriceSort === dishes[dIndex].price[i].priceSort) {
+            return i;
         }
     }
     return -1;
 }
 
-function dishIndex(dishID) {
-    for (var i = 0; i < dishes.length; i++) {
-        if (dishes[i].dishID === dishID) return i;
-    }
-    return -1;
-}
+function priceClick(dishID, priceSort) {
+    var el, di, at, ct = '';
 
-function showDishCount(dishID) {
-    var elemDecrease, elemCount, elemID;
-    var dishCount, i;
-
-    for (i = 0; i < orders.length; i++) {
-        if (orders[i].dishID === dishID) {
-            dishCount = orders[i].count;
-            break;
+    di = getDishIndex(dishID);
+    dishes[di].currentPriceSort = priceSort;
+    for (var i = 0; i < dishes[di].price.length; i++) {
+        el = document.getElementById('price_' + dishID + '_' + dishes[di].price[i].priceSort);
+        at = el.getAttribute('class');
+        at = at.replace(/color-red/g, '');
+        at = at.replace(/color-blue/g, '');
+        if (dishes[di].price[i].priceSort === priceSort) {
+            el.setAttribute('class', at.replace(/^\s+|\s+$/gm, '') + ' color-red');
+        } else {
+            el.setAttribute('class', at.replace(/^\s+|\s+$/gm, '') + ' color-blue');
         }
     }
-
-    elemID = 'decreaseDish_' + dishID;
-    elemDecrease = document.getElementById(elemID);
-    elemID = 'dishCount_' + dishID;
-    elemCount = document.getElementById(elemID);
-
-    if (dishCount < 1) {
-        elemDecrease.setAttribute('hidden', 'true');
-        elemCount.setAttribute('hidden', 'true');
+    el = document.getElementById('dishPrice_' + dishID);
+    if (dishes[di].discount !== 10) {
+        ct += '<del>￥' + dishes[di].price[indexOfCurrentPriceSort(di)].price + '元</del>';
     } else {
-        elemDecrease.removeAttribute('hidden');
-        elemCount.removeAttribute('hidden');
-        elemCount.innerHTML = dishCount;
+        ct += '￥' + dishes[di].price[indexOfCurrentPriceSort(di)].priceAfterDiscount + '元';
     }
-}
+    el.innerHTML = ct;
 
-function orderChange(typeID, dishID) {
-    var order = {};
-    var changeCount = 1;
-    var i, j, dIndex;
-    var isNew = true;
-    var elem, elemID;
+    el = document.getElementById('dishPriceAfterDiscount_' + dishes[di].dishID);
 
-    if (dishID < 0) changeCount = -1;
-    dishID = Math.abs(dishID);
-
-    dIndex = dishIndex(dishID);
-    if (orders.length < 1) {
-        order.dishID = dishID;
-        order.count = 1;
-        orders.push(order);
-    } else {
-        for (i = 0; i < orders.length; i++) {
-            if (orders[i].dishID === dishID) {
-                orders[i].count += changeCount;
-                isNew = false;
-                break;
-            }
-        }
-        if (isNew) {
-            order.dishID = dishID;
-            order.count = 1;
-            orders.push(order);
-        }
+    if (dishes[di].discount !== 10) {
+        content += '￥' + dishes[di].price[indexOfCurrentPriceSort(di)].priceAfterDiscount + '元';
     }
-    showDishCount(dishID);
-    displayOrderCount();
-}
-
-function typeStars(typeID) {
-    starts = 0;
-    for (var i = 0; i < dishes.length; i++) {
-        if (dishes[i].typeID == typeID) starts = Math.max(starts, dishes[i].mustOrder);
-    }
-    switch (starts) {
-        case 0:
-            return '';
-        case 1:
-            return '**';
-        case 2:
-            return '*';
-    }
+    showDishCount(di, priceSort);
 }
 
 function genData() {
     var toolBar = '',
         content = '',
-        i,
+        i, j,
         currTypeID = 0,
         elem;
-    //  class="link close-panel"
+
     for (i = 0; i < dishes.length; i++) {
-        // for (i = 0; i < 1; i++) {
         if (currTypeID !== dishes[i].typeID) {
             currTypeID = dishes[i].typeID;
             dishTypes.push(currTypeID);
-            // toolBar += '<p><a href="#dishList_' + currTypeID + '">' + dishes[i].typeName;
-            // toolBar += '<span id="toolBar_badge_' + currTypeID + '"></span></a></p>';
             toolBar += '<p><a href="#" class="close-panel" onclick="showPage(' + currTypeID + ')">' + dishes[i].typeName + typeStars(currTypeID);
             toolBar += '<span id="toolBar_badge_' + currTypeID + '"></span></a></p>';
             if (content === '') {
-                content = '<div id="page_' + currTypeID + '" data-page="page_' + currTypeID + '" class="page">\n';
+                content = '<div id="page_' + currTypeID + '" data-page="page_' + currTypeID + '" class="page dishPage">\n';
             } else {
-                content += ' </table>\n</div>\n</div>\n<div id="page_' + currTypeID + '" class = "page cached" data-page="page_' + currTypeID + '">\n';
+                content += ' </table>\n</div>\n</div>\n<div id="page_' + currTypeID + '" class = "page cached dishPage" data-page="page_' + currTypeID + '">\n';
             }
             content += '<div class="page-content">\n<table id="tableContent' + currTypeID;
-            content += '" width="100%" style="font-size:1.2rem">\n';
+            content += '" width="100%" style="font-size:1.2rem;margin-top:3rem">\n';
             content += '<div>\n<a name="dishList_' + currTypeID + '" id="dishList_' + currTypeID + '"></a>\n<tr ';
         } else {
             content += '<div>\n<tr ';
         }
-        content += 'style="margin:0;padding:0" border=1>\n<td width="64%" style="margin:0;padding:0">\n';
-        content += '<img src="image/' + dishes[i].imageFile + '" width="100%" style="margin:0;padding:0"></img>\n';
+        content += 'style="margin:0;padding:0" border=1>\n<td width="40%" style="margin:0;padding:0">\n';
+        content += '<img src="image/' + dishes[i].imageFile + '" width="100%" style="margin:0;padding:0" ';
+        content += 'onclick="showImage(' + dishes[i].dishID + ');" id="dishImage_' + dishes[i].dishID + '"></img>\n';
         content += '</td>\n<td>\n<table width="100%">\n<tr>\n<td id="dishName_' + dishes[i].dishID + '">';
-        switch (dishes[i].mustOrder) {
-            case 0:
-                content += dishes[i].dishName;
-                break;
-            case 1:
-                content += dishes[i].dishName + '**';
-                break;
-            case 2:
-                content += dishes[i].dishName + '*';
-                break;
-        }
+        content += dishes[i].dishName + typeStars(dishes[i].typeID);
         content += '</td>\n</tr>\n<tr>\n<td id="dishPrice_' + dishes[i].dishID + '">';
         if (dishes[i].discount !== 10) {
-            content += '<del>￥' + dishes[i].price + '元</del></td>\n';
+            content += '<del>￥' + dishes[i].price[0].price + '元</del></td>\n';
         } else {
-            content += '￥' + dishes[i].price + '元</td>\n';
+            content += '￥' + dishes[i].price[0].priceAfterDiscount + '元</td>\n';
         }
         content += '</tr>\n<tr>\n<td id="dishPriceAfterDiscount_' + dishes[i].dishID + '">\n';
-        dishes[i].priceAfterDiscount = Math.ceil(dishes[i].price * dishes[i].discount / 10);
+
         if (dishes[i].discount !== 10) {
-            content += '￥' + dishes[i].priceAfterDiscount + '元\n';
+            content += '￥' + dishes[i].price[0].priceAfterDiscount + '元\n';
         }
-        content += '</td>\n</tr>\n<tr>\n<td style="color:red;font-size:2.5rem;text-align:right">\n';
+        content += '</td>\n</tr>\n';
+        dishes[i].currentPriceSort = dishes[i].price[0].priceSort;
+        if (dishes[i].priceSorts > 1) {
+            content += '<tr><td><div class="buttons-row">';
+            for (j = 0; j < dishes[i].price.length; j++) {
+                content += '<a href="#" id="price_' + dishes[i].dishID + '_' + dishes[i].price[j].priceSort + '" class="button button-primary';
+                if (j === 0) content += ' color-red';
+                content += '" onclick="priceClick(' + dishes[i].dishID + ',' + dishes[i].price[j].priceSort + ');">' + ps[dishes[i].price[j].priceSort];
+                content += '<span style="font-color:red" id="priceBadge_' + dishes[i].dishID + '_' + dishes[i].price[j].priceSort + '"></span></a>';
+            }
+            content += '</div></td></tr>';
+        }
+        content += '<tr>\n<td style="color:red;font-size:2.5rem;text-align:right">\n';
         content += '<a id="decreaseDish_' + dishes[i].dishID + '" ';
-        content += 'onclick="orderChange(' + dishes[i].typeID + ',-' + dishes[i].dishID;
-        content += ');" hidden>-</a>\n<span id="dishCount_';
+        content += 'onclick="orderChange(-' + dishes[i].dishID + ',dishes[' + i + '].currentPriceSort';
+        content += ',true);" hidden>-</a>\n<span id="dishCount_';
         content += dishes[i].dishID + '" hidden>0</span>\n<a id="plusDish_' + dishes[i].dishID;
         content += '" onclick="orderChange(';
-        content += dishes[i].typeID + ',' + dishes[i].dishID + ')';
+        content += dishes[i].dishID + ',dishes[' + i + '].currentPriceSort,true)';
         content += ';">\n+\n</a>\n</td>\n</tr>\n</table>\n</td>\n</tr>\n<tr>\n<td colspan="2" id="dishDescription_';
         content += dishes[i].dishID;
         content += '">\n' + dishes[i].description + '</td>\n</tr>\n</div>\n';
@@ -340,6 +666,14 @@ function genData() {
     elem.innerHTML += toolBar;
     elem = document.getElementById('pages');
     elem.innerHTML += content;
+    currentPageTypeID = dishes[0].typeID;
+    dataGened = true;
+    if (wsConnected && !orderGot) {
+        ws.send(JSON.stringify({
+            command: 'getOrders',
+            uid: uid,
+            tableID: tableID
+        }));
+    }
 
-    // console.log(toolBar);
 }
