@@ -7,12 +7,87 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <title>堂食点餐</title>
+    <link rel="stylesheet" href="css/framework7.ios.min.css">
+    <link rel="stylesheet" href="css/framework7.ios.colors.min.css">
+    <link rel="stylesheet" href="css/my-app.css">
+    <link rel="stylesheet" href="css/menu.css">
+    <script type="text/javascript" src="js/url.js"></script>
+    <script type="text/javascript" src="js/framework7.min.js "></script>
+    <script type="text/javascript" src="js/ajax.js"></script>
+    <script type="text/javascript" src="js/uuid.js "></script>
 </head>
 
-<body>
-    <script>
-        location.href="http://113.200.95.7:8888/order.html?id=685d43d16afa1" ;
-    </script>
+<body onload="load();">
+    <div class="panel-overlay"></div>
+
+    <div class="panel panel-left panel-reveal">
+        <div class="content-block" id="leftSideMenu" style="font-size:1.5em;">
+            <p><span style="color:red">**</span>必选,<span style="color:red">*</span>必选一项</p>
+        </div>
+    </div>
+    <div class="panel panel-right panel-reveal">
+        <div class="content-block" id="rightSideMenu" style="font-size:1.5em;">
+            <p><a href="#" class="close-panel" onclick="emptyIt();">清空重选</a></p>
+            <p><a href="#" class="close-panel" onclick="displayOrders();">查看、撤销订单</a></p>
+            <p><a href="#" class="close-panel" onclick="callWaitress();">呼叫服务员</a></p>
+        </div>
+    </div>
+    <div class="statusbar-overlay"></div>
+    <div class="views">
+        <div class="view view-main">
+
+            <div class="navbar">
+                <div class="navbar-inner">
+                    <div class="left"><a href="#" data-panel="left" class="open-panel"><span id="dishTypeMenu">类别</span><sub style="color:red">▼</sub></a></div>
+                    <div class="center"><a href="#" onclick="toggleOrderDetailPage();"><span id="orderMenu">下单<sub style="color:red">▼</sub></span></a></div>
+                    <div class="right"><a href="#" class="open-panel" data-panel="right"><span id="serviceMenu">服务<sub style="color:red">▼</sub></span></a></div>
+                </div>
+            </div>
+
+            <!-- <div class="pages navbar-through toolbar-through" id="pages"> -->
+            <div class="pages" id="pages">
+
+                <div id="page_orderDetail" data-page="page_orderDetail" class="page" style="z-index:10086" hidden>
+                    <div class="page-content">
+                        <div class="buttons-row">
+                            <a href="#" class="button button-raised active button-big color-red" id="confirmOrder" onclick="orderIt();">确认下单</a>
+                            <a href="#" class="button button-raised active button-big color-blue" id="continueOrder" onclick="toggleOrderDetailPage();">继续点菜</a>
+                        </div>
+                        <p></p>
+                        <div id="orderdDishesList"></div>
+                    </div>
+                </div>
+
+                <div id="page_displayOrder" data-page="page_displayOrder" class="page" style="z-index:10086" hidden>
+                    <div class="page-content">
+                        <div class="buttons-row">
+                            <a href="#" class="button button-raised active button-big color-red" id="displayOrder" onclick="document.getElementById('page_displayOrder').setAttribute('hidden',true);">返回</a>
+                        </div>
+                        <p></p>
+                        <div id="displayOrderList"></div>
+                    </div>
+                </div>
+
+                <div id="page_image" data-page="page_image" class="page" style="z-index:10086" hidden>
+                    <div class="page-content">
+                        <div class="buttons-row">
+                            <a href="#" class="button active button-raised button-big color-red" id="displayImage" onclick="document.getElementById('page_image').setAttribute('hidden',true);">返回</a>
+                        </div>
+                        <br />
+                        <div>
+                            <img id="dishImage" width="100%"></img>
+                        </div>
+                        <div id='description' style="font-size:1.2rem">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script type="text/javascript" src="js/my-app.js "></script>
+    <script type="text/javascript" src="js/order.js "></script>
 </body>
 
 </html>
